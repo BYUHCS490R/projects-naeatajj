@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('blue blackground.jpg');
+    color: white;
+
+}
+
+header {
+    background: url('blue wave.png') no-repeat top right;
+    background-size: 6em;
+   
+
+}
+
+.mylist {
+    list-style-type: decimal;
+
+}
+
+.other {
+    background-image: url('dot.png');
+    background-repeat: repeat;
+    background-color:rgb(29, 29, 148);
+
+}

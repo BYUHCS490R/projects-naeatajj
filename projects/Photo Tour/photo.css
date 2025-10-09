@@ -1,0 +1,156 @@
+/* === Basic Page Setup === */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  color: #333;
+
+  /* repeating background image (texture) */
+  background-image: url("images/bg-pattern.png");
+  background-repeat: repeat;
+
+  /* decorative non-repeating background image on the right */
+  background-attachment: fixed;
+  background-position: right bottom;
+  background-size: 200px;
+}
+
+/* === Header === */
+header {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header .subtitle {
+  margin-top: 5px;
+  font-size: 1.1em;
+}
+
+/* === Navigation Bar === */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #023e8a;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+/* hover effect */
+.main-nav a:hover {
+  background-color: #48cae4;
+  color: #000;
+}
+
+/* highlight current page */
+.main-nav a.current {
+  background-color: #00b4d8;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* === Main Content === */
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  color: #0077b6;
+}
+
+/* === Places List with Custom Bullets === */
+.places {
+  list-style: none; /* remove default bullets */
+  padding-left: 0;
+}
+
+.places li {
+  background-image: url("images/bullet.png"); /* small bullet image */
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+  padding-left: 30px;
+  margin: 10px 0;
+}
+
+.places a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.places a:hover {
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  background-color: #0077b6;
+  color: white;
+  padding: 10px 0;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
+  .main-nav {
+    flex-direction: column;
+  }
+
+  .main-nav a {
+    display: block;
+    border-top: 1px solid #48cae4;
+
+}
+
+main {
+    padding: 15px;
+}
+
+/* === Photo Layout for Two Images Side-by-Side === */
+.photo-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;           /* space between the two photos */
+  flex-wrap: wrap;     /* allows them to stack on small screens */
+  margin-bottom: 15px;
+}
+
+.photo-row img {
+  width: 45%;          /* each photo takes about half the page */
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* make them full-width on mobile screens */
+@media (max-width: 600px) {
+  .photo-row img {
+    width: 100%;
+  }
+}
+
+
+
+
+
