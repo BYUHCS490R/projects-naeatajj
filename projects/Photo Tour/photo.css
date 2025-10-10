@@ -138,7 +138,7 @@ main {
 }
 
 .photo-row img {
-  width: 45%;          /* each photo takes about half the page */
+  width: 30%;          /* each photo takes about half the page */
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
@@ -146,9 +146,9 @@ main {
 /* make them full-width on mobile screens */
 @media (max-width: 600px) {
   .photo-row img {
-    width: 100%;
-  }
+    width: 60%;
 }
+
 
 
 
