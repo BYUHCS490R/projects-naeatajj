@@ -1,0 +1,165 @@
+/* Existing styles (keep what you already have) */
+
+/* --- NEW GRID SECTION FOR Q&A --- */
+.learning-corner {
+  background-color: #f3e3b4;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.learning-corner h3 {
+  text-align: center;
+  color: #4b1e0f;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for questions and answers */
+.qa-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 15px;
+  align-items: start;
+}
+
+.qa-grid .question {
+  background-color: #f9d67a;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #3b250b;
+  border-left: 5px solid #b8860b;
+}
+
+.qa-grid .answer {
+  background-color: #fff6dc;
+  padding: 15px;
+  border-radius: 8px;
+  color: #2b1a0a;
+  line-height: 1.6;
+  border-left: 5px solid #e3b448;
+}
+
+/* Responsive design: stack Q&A vertically on smaller screens */
+@media (max-width: 700px) {
+  .qa-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Page Base */
+body {
+  background-color: #4b1e0f;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #2b1a0a;
+}
+
+/* Wrapper uses CSS Grid */
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #f7d98c;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Grid areas */
+header {
+  grid-area: header;
+  background-image: url('tropical-header.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  border-bottom: 4px solid #b8860b;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #b8860b;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  grid-area: main;
+  padding: 20px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* Float image and control text flow */
+figure.float-left {
+  float: left;
+  width: 40%;
+  margin: 10px 20px 10px 0;
+}
+
+figure.float-left img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+figure.float-left figcaption {
+  font-size: 0.9em;
+  text-align: center;
+  font-style: italic;
+  color: #5a3e1b;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #b8860b;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 0.95em;
+}
+
+/* Hint text */
+.hint {
+  font-style: italic;
+  color: #3b2c14;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive grid: two-column layout for larger screens */
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main main"
+      "footer footer";
+  }
+}
+
