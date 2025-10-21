@@ -1,0 +1,124 @@
+/* Basic Page Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f2ecd8;
+  color: #3b2a1a;
+}
+
+/* Wrapper centers all content */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fffaf0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background-color: #f4b183;
+  text-align: center;
+  color: white;
+  padding: 40px 10px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4em;
+}
+
+header h2 {
+  margin: 10px 0 0;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Flex Navigation */
+.flex-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffe5b4;
+  padding: 12px;
+}
+
+.flex-nav a {
+  text-decoration: none;
+  color: #3b2a1a;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.flex-nav a:hover {
+  color: #e67300;
+}
+
+/* Main Section */
+main {
+  padding: 20px 30px;
+  line-height: 1.6;
+}
+
+.float-left {
+  float: left;
+  margin: 10px 20px 10px 0;
+}
+
+.float-left img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.float-left figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Hint paragraph */
+.hint {
+  background-color: #fff1d6;
+  border-left: 5px solid #f4b183;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Flexbox Q&A Section */
+.flex-questions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: #fff1e6;
+  padding: 20px;
+}
+
+.question {
+  flex: 1 1 350px;
+  background-color: #fff;
+  border: 2px solid #f4b183;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.question h4 {
+  color: #e67300;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #f4b183;
+  color: white;
+  padding: 15px;
+  font-style: italic;
+}
