@@ -1,0 +1,145 @@
+/* RESET & BASE */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  background-color: #2f4f4f;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header h2 {
+  margin: 5px 0 0;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+/* NAVIGATION BAR */
+nav {
+  background-color: #e8eefc;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  display: block;
+  padding: 12px 20px;
+  color: darkblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #cfd8f4;
+}
+
+/* MAIN LAYOUT */
+.content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* SIDEBAR */
+aside {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+aside h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* MAIN CONTENT - CARDS GRID */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* PROFILE CARDS */
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+  font-size: 1.1em;
+}
+
+.card p {
+  margin: 0 10px 15px;
+  font-size: 0.9em;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  display: block;
+  color: blue;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 800px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
