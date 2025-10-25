@@ -1,0 +1,118 @@
+/* Base styling */
+body {
+  background-color: #f8f3e8;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #2b1a0a;
+}
+
+.wrapper {
+  width: 880px;
+  margin: 30px auto;
+  background-color: #fffbea;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Header styling */
+header {
+  background-image: url('tropical-header.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  border-bottom: 5px solid #b8860b;
+}
+
+/* Navigation bar */
+.flex-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #b8860b;
+}
+
+.flex-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 14px 25px;
+  display: block;
+}
+
+.flex-nav a:hover {
+  background-color: #d4af37;
+}
+
+/* Main content */
+main {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.float-left {
+  float: left;
+  margin-right: 15px;
+  width: 40%;
+}
+
+.float-left img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-size: 0.9em;
+  text-align: center;
+  color: #4b1e0f;
+}
+
+/* Footer styling */
+footer {
+  background-color: #b8860b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* PRINT CSS SECTION */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+    font-family: 'Times New Roman', serif;
+  }
+
+  header, nav, footer {
+    display: none; /* Hide non-essential areas for print */
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.questions {
+  background-color: #fff3cd;
+  border: 2px solid #b8860b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 25px;
+}
+.questions h3 {
+  color: #b8860b;
+}
+.questions h4 {
+  margin-bottom: 5px;
+  color: #4b1e0f;
+}
