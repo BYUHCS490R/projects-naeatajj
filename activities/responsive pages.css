@@ -1,0 +1,204 @@
+/* ===============================
+   JJ's Island Adventures - print.css
+   =============================== */
+
+/* General Page Setup */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0e6d2;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #2b1a0a;
+}
+
+/* Wrapper centers all content */
+.wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fff8e7;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Header Section */
+header {
+  background-image: url('tropical-header.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.3em;
+}
+
+header h2 {
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+/* Navigation Menu */
+.flex-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #b8860b;
+  padding: 10px 0;
+}
+
+.flex-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.flex-nav a:hover {
+  background-color: #e3c565;
+  color: #2b1a0a;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+
+main h3 {
+  color: #4b1e0f;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Float image to left for paragraphs */
+.float-left {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.float-left img {
+  width: 230px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #4b1e0f;
+  margin-top: 5px;
+}
+
+/* Paragraph styling */
+p {
+  margin-bottom: 15px;
+}
+
+.hint {
+  font-style: italic;
+  color: #b8860b;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Questions section styling */
+.questions {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #fff0c2;
+  border: 2px solid #b8860b;
+  border-radius: 10px;
+}
+
+.questions h3 {
+  text-align: center;
+  color: #4b1e0f;
+}
+
+.questions h4 {
+  margin-top: 15px;
+  color: #b8860b;
+}
+
+.questions pre {
+  background-color: #f7d98c;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  background-color: #b8860b;
+  color: white;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+/* ======================================
+   Responsive Design - Mobile Adjustments
+   ====================================== */
+
+/* QUESTION 3:
+   How do you change the CSS for phones?
+   ANSWER:
+   By using a media query like the one below! */
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 30px 10px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header h2 {
+    font-size: 1.1em;
+  }
+
+  .flex-nav {
+    flex-direction: column; /* QUESTION 2:
+                               If two flex-direction rules exist,
+                               the one that appears LAST takes priority. */
+    align-items: center;
+  }
+
+  .flex-nav a {
+    margin: 5px 0;
+  }
+
+  .float-left {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
+    text-align: center;
+  }
+
+  .float-left img {
+    width: 90%;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .wrapper {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+
+
