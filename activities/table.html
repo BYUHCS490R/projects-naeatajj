@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables Activity</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <header>
+        <h1>JJ's Web Design Site</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="activities.html">Activities</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Engagement - Tables</h1>
+
+        <h2>Questions & Answers</h2>
+
+        <p><strong>1. When do you use a table?</strong></p>
+        <p>You use a table when you need to organize data into rows and columns. Tables are best used when the information needs to be compared in a structured grid format, such as schedules, pricing charts, or statistical data.</p>
+
+        <p><strong>2. When do you not use a table?</strong></p>
+        <p>Do not use a table for page layout or general positioning. Tables should not be used to create the structure of a webpage because modern CSS tools (Flexbox and Grid) are designed for layout and work better across devices.</p>
+
+        <p><strong>3. When do you need to do extra work for table accessibility?</strong></p>
+        <p>Extra accessibility steps are needed when the table contains large or complex data. This includes adding a caption, proper header cells using &lt;th&gt;, and using <code>scope="col"</code> or <code>scope="row"</code> so that screen readers can interpret the table correctly.</p>
+
+        <h2>Example Table</h2>
+
+        <table>
+            <caption>Weekly Study Schedule</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Time (Hours)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Web Design</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Networking</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Peacebuilding</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JJ Naeata</p>
+    </footer>
+</body>
+</html>

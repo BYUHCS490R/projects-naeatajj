@@ -1,0 +1,71 @@
+/* Base page formatting */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+header {
+    background-color: #2a5b84;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #17405a;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content area */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: white;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #2a5b84;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #2a5b84;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
