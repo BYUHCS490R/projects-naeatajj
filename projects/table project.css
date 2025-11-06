@@ -1,0 +1,98 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+/* Header */
+header {
+  background-color: #013369;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color: #1259a7;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* FLEX LAYOUT – sidebar on the RIGHT */
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+/* Main Content */
+main {
+  flex: 3;
+  padding-right: 20px;
+}
+
+/* Sidebar */
+aside {
+  flex: 1;
+  background-color: #e6eef8;
+  border-left: 3px solid #1259a7;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+th {
+  background-color: #1259a7;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+}
+
+/* alternate row colors */
+tbody tr:nth-child(even) {
+  background-color: #d9e7f6;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Footer */
+footer {
+  background-color: #013369;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 25px;
+}
