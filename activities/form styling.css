@@ -1,0 +1,106 @@
+/* Global Page Settings */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+
+/* Wrapper */
+.wrapper {
+  width: 85%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+/* Question & Answer Styling */
+.qa-section {
+  background: #f2f7ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border-left: 6px solid #0077ff;
+}
+
+.qa-section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.qa {
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-form label {
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 48%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Make textarea full width */
+.contact-form textarea {
+  height: 120px;
+  width: 100%;
+  resize: none;
+}
+
+/* Submit Button */
+.contact-form button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover */
+.contact-form button:hover {
+  background-color: #005fd4;
+}
+
+/* ✅ RESPONSIVE FOR MOBILE */
+@media screen and (max-width: 600px) {
+  .contact-form {
+    flex-direction: column;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Styling with Flex</title>
+  <link rel="stylesheet" href="form styling.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header>
+      <h1>Form Styling Demo</h1>
+      <p>Responsive form using Flexbox</p>
+    </header>
+
+    <!-- QUESTIONS SECTION -->
+    <section class="qa-section">
+      <h2>Questions & Answers</h2>
+
+      <div class="qa">
+        <h3>1. What are different ways to style your form?</h3>
+        <p>
+          You can style forms using several CSS techniques such as:
+          padding, margin, border-radius, box-shadow, fonts, colors,
+          background-color, grid, and flexbox layouts. You can even use hover
+          and focus states to highlight input fields when the user interacts
+          with them.
+        </p>
+      </div>
+
+      <div class="qa">
+        <h3>2. How does flex help for both Desktop and Mobile phones?</h3>
+        <p>
+          Flexbox helps forms resize automatically. On desktops, the inputs can
+          sit side-by-side (row layout), and on mobile screens, the direction can
+          switch to column so elements stack vertically. This makes your webpage
+          responsive without extra code.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACTUAL FORM -->
+    <form class="contact-form">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required />
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required />
+
+      <label>Message</label>
+      <textarea placeholder="Write your message here" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+      <p>Form Styling • Flexbox Responsive Design</p>
+    </footer>
+
+  </div>
+</body>
+</html>
