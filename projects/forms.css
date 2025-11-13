@@ -1,0 +1,106 @@
+/* ----- Header & Footer Styling ----- */
+header, footer {
+  background: steelblue;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background: #222;
+}
+
+/* ----- Form Layout ----- */
+form {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+fieldset {
+  border: 2px solid steelblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  padding: 0 10px;
+  font-weight: bold;
+  color: steelblue;
+}
+
+/* Align labels + inputs horizontally */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  width: 180px;
+  font-weight: bold;
+}
+
+/* Input, select, textarea styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #999;
+  background: #f7f7f7;
+  font-size: 1rem;
+}
+
+/* Radio & checkbox styling */
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+/* Submit button */
+button {
+  width: 200px;
+  padding: 12px;
+  background: steelblue;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background: #1d5f8c;
+}
+
+/* ----- MOBILE STYLING ----- */
+@media (max-width: 600px) {
+  /* Labels above inputs */
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+}

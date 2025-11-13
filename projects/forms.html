@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Form Project</title>
+  <link rel="stylesheet" href="forms.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Registration Form</h1>
+    <p>Complete the fields below</p>
+  </header>
+
+  <main>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <!-- Name -->
+        <div class="form-row">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required />
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <!-- Password -->
+        <div class="form-row">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <!-- Phone -->
+        <div class="form-row">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <!-- Date -->
+        <div class="form-row">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" />
+        </div>
+
+        <!-- Gender (Radio) -->
+        <div class="form-row">
+          <label>Gender:</label>
+          <div class="options">
+            <label><input type="radio" name="gender" value="male" /> Male</label>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+            <label><input type="radio" name="gender" value="other" /> Other</label>
+          </div>
+        </div>
+
+        <!-- Interests (Checkbox) -->
+        <div class="form-row">
+          <label>Interests:</label>
