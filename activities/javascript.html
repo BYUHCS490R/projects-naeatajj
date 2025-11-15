@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Processing with JavaScript</title>
+  <link rel="stylesheet" href="javascript.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Form Processing with JavaScript</h1>
+    <p>Engagement Assignment</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Form</a>
+    <a href="#">Questions</a>
+  </nav>
+
+  <main class="wrapper">
+
+    <!-- FORM SECTION -->
+    <section>
+      <h2>Enter Your Information</h2>
+
+      <form id="infoForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" required>
+
+        <label for="color">Favorite Color:</label>
+        <input type="text" id="color" required>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+
+    <!-- QUESTIONS SECTION -->
+    <section>
+      <h2>JavaScript Questions</h2>
+
+      <h3>1. What is JavaScript? How did it get its name?</h3>
+      <p>
+        JavaScript is a high-level programming language used to make web pages interactive. 
+        It was originally called <b>Mocha</b>, then <b>LiveScript</b>. 
+        Marketing teams later renamed it "JavaScript" to ride the popularity of Java at the time, 
+        even though the languages are not closely related.
+      </p>
+
+      <h3>2. What are the two ways you can run JavaScript?</h3>
+      <p>
+        (1) Inside the web browser (client-side JavaScript).<br>
+        (2) On a server using Node.js (server-side JavaScript).
+      </p>
+
+      <h3>3. What was the most popular front-end JS library?</h3>
+      <p>
+        The most popular front-end JavaScript library in the 2000s and 2010s was <b>jQuery</b>.
+      </p>
+
+      <h3>4. What is the most popular front-end JS library today?</h3>
+      <p>
+        Today the most popular front-end library is <b>React</b>, created by Facebook. 
+        It is widely used for building user interfaces and single-page applications.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 JJ’s Web Development</p>
+  </footer>
+
+  <!-- JAVASCRIPT FORM PROCESSING -->
+  <script>
+    document.getElementById("infoForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // stops page from refreshing
+
+      let name = document.getElementById("name").value;
+      let age = document.getElementById("age").value;
+      let color = document.getElementById("color").value;
+
+      document.getElementById("result").innerHTML =
+        `<h3>Form Output:</h3>
+         <p><strong>Name:</strong> ${name}</p>
+         <p><strong>Age:</strong> ${age}</p>
+         <p><strong>Favorite Color:</strong> ${color}</p>`;
+    });
+  </script>
+
+</body>
+</html>
