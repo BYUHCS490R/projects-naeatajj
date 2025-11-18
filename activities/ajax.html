@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Processing with AJAX</title>
+    <link rel="stylesheet" href="ajax.css">
+</head>
+<body>
+
+<header>
+    <h1>Form Processing with AJAX</h1>
+</header>
+
+<main>
+
+    <!-- =============================== -->
+    <!-- VISIBLE QUESTIONS & ANSWERS     -->
+    <!-- =============================== -->
+    <section class="qa-section">
+        <h2>Questions & Answers</h2>
+
+        <h3>1. What is AJAX?</h3>
+        <p>
+            AJAX stands for <strong>Asynchronous JavaScript and XML</strong>. 
+            It allows a webpage to send or receive data from a server 
+            <strong>without refreshing the entire page</strong>.  
+            This makes websites smoother, faster, and more interactive.
+        </p>
+
+        <h3>2. Why do we put JavaScript in a separate file?</h3>
+        <p>
+            We put JavaScript in a separate file because:
+            <ul>
+                <li>It keeps the HTML cleaner and easier to read</li>
+                <li>JavaScript can be reused on multiple pages</li>
+                <li>Browsers cache JS files, making sites load faster</li>
+                <li>It follows best practice (separate HTML, CSS, JS)</li>
+            </ul>
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- =============================== -->
+    <!-- CONTACT FORM                    -->
+    <!-- =============================== -->
+    <h2>Contact Form</h2>
+
+    <form id="myForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Enter your message" required></textarea>
+
+        <button type="submit">Submit Form</button>
+    </form>
+
+    <p id="response"></p>
+
+</main>
+
+<footer>
+    <p>© 2025 AJAX Form Demo</p>
+</footer>
+
+<!-- ===================================== -->
+<!-- JAVASCRIPT + AJAX (UNCHANGED)         -->
+<!-- ===================================== -->
+<script>
+    // Validate form before AJAX
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            document.getElementById("response").innerText =
+                "Please fill in all fields before submitting.";
+            return;
+        }
+
+        sendAjaxForm(name, email, message);
+    });
+
+    // AJAX FUNCTION
+    function sendAjaxForm(name, email, message) {
+
+        let formData = {
+            name: name,
+            email: email,
+            message: message
+        };
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "process.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+
+                if (xhr.status === 200) {
+                    document.getElementById("response").innerText =
+                        "AJAX Response: " + xhr.responseText;
+                } else {
+                    document.getElementById("response").innerText =
+                        "Error sending form.";
+                }
+            }
+        };
+
+        xhr.send(JSON.stringify(formData));
+    }
+</script>
+
+</body>
+</html>
