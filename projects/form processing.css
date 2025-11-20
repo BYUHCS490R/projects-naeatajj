@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#responseBox {
+    margin-top: 20px;
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
