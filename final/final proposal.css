@@ -1,0 +1,58 @@
+/* ====== Page Styling ====== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fb;
+}
+
+/* ====== Header & Footer ====== */
+header, footer {
+    background-color: #004b6b;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/* ====== Main Content Box ====== */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px 25px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+
+/* ====== Headings ====== */
+h1, h2, h3 {
+    color: #004b6b;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+/* ====== Lists ====== */
+ul {
+    margin-left: 20px;
+}
+
+/* ====== Links ====== */
+a {
+    color: #006699;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ====== Warning Box ====== */
+.statement {
+    background-color: #eef7ff;
+    padding: 10px 15px;
+    border-left: 4px solid #004b6b;
+    border-radius: 4px;
+}
