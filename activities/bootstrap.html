@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Engagement Example</title>
+
+    <!-- BOOTSTRAP CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Bootstrap Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <header class="bg-dark text-white text-center py-5">
+        <h1>Welcome to My Bootstrap Page</h1>
+        <p class="lead">This page demonstrates Bootstrap features with custom CSS styling.</p>
+        <a href="#" class="btn btn-warning btn-lg mt-3">Get Started</a>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container my-5">
+
+        <!-- BOOTSTRAP GRID -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Bootstrap Grid Example</h2>
+                <p>
+                    This column takes up half the width on medium screens and full width on small screens.
+                </p>
+
+                <!-- BOOTSTRAP ALERT -->
+                <div class="alert alert-success" role="alert">
+                    This is a Bootstrap success alert!
+                </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <img src="https://via.placeholder.com/450x250" class="img-fluid rounded shadow" alt="Placeholder">
+            </div>
+        </div>
+
+        <!-- CARD EXAMPLE -->
+        <div class="row mt-5">
+            <div class="col-md-4 offset-md-4">
+                <div class="card shadow-lg custom-card">
+                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Bootstrap Card</h5>
+                        <p class="card-text">This card is styled with Bootstrap and enhanced with custom CSS.</p>
+                        <a href="#" class="btn btn-primary w-100">Learn More</a>

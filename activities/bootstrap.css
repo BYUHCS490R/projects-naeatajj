@@ -1,0 +1,25 @@
+/* CUSTOM CSS FOR BOOTSTRAP PAGE */
+
+body {
+    background-color: #f3f6fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(to right, #0d6efd, #6610f2);
+}
+
+.custom-card {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+}
+
+/* Custom footer styling */
+footer {
+    font-weight: bold;
+}
+
