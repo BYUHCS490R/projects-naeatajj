@@ -1,56 +1,36 @@
-// form.js
+// js/form.js
+
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
+  const form = document.getElementById("bookingForm");
+  const responseDiv = document.getElementById("formResponse");
+
   if (!form) return;
 
-  const errorBox = document.getElementById("formError");
-  const successBox = document.getElementById("formSuccess");
-  const formContainer = document.getElementById("formContainer");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // stop normal HTTP submit
-
-    errorBox.textContent = "";
-    successBox.textContent = "";
-
-    const name = form.fullName.value.trim();
+  form.addEventListener("submit", function (event) {
+    const name = form.name.value.trim();
     const email = form.email.value.trim();
-    const tripDate = form.tripDate.value;
+    const phone = form.phone.value.trim();
+    const sessionType = form.sessionType.value.trim();
+    const date = form.date.value;
+    const location = form.location.value.trim();
     const message = form.message.value.trim();
-    const activity = form.querySelector('input[name="favoriteActivity"]:checked');
-    const area = form.areaOfInterest.value;
-    const termsChecked = form.terms.checked;
 
-    const errors = [];
+    let errors = [];
+
     if (!name) errors.push("Please enter your name.");
     if (!email) errors.push("Please enter your email.");
-    if (!activity) errors.push("Please choose your favorite activity.");
-    if (!area) errors.push("Please choose an area of interest.");
-    if (!termsChecked) errors.push("Please agree to the terms.");
-
-    if (errors.length > 0) {
-      errorBox.textContent = errors.join(" ");
-      return;
+    if (!phone) errors.push("Please enter your phone number.");
+    if (!sessionType) errors.push("Please choose a session type.");
+    if (!date) errors.push("Please choose a date.");
+    if (!location) errors.push("Please enter a location.");
+    if (message.length < 20) {
+      errors.push("Your message should be at least 20 characters long.");
     }
 
-    const formData = {
-      name,
-      email,
-      tripDate,
-      favoriteActivity: activity ? activity.value : "",
-      areaOfInterest: area,
-      message,
-      agreedToTerms: termsChecked,
-    };
-
-    console.log("Form object:", formData);
-
-    // Simulated AJAX success
-    setTimeout(function () {
-      form.reset();
-      formContainer.style.display = "none";
-      successBox.textContent =
-        "Mahalo! Your recommendation request has been received. This message shows that the form was processed successfully.";
-    }, 400);
+    if (errors.length > 0) {
+      event.preventDefault();
+      alert(errors.join("\n"));
+    }
+    // otherwise, the form submits to process_form.php (server-side)
   });
 });

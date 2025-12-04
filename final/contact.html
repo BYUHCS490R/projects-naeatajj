@@ -2,131 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact &amp; Recommendations – JJ’s Island Adventures</title>
+  <title>Tonga Footprint Portraits | Book a Session</title>
+  <meta name="description" content="Contact Tonga Footprint Portraits to ask questions or book a photography session.">
+  <meta name="keywords" content="book Tonga Footprint, contact, photography form">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="final update.css">
+  <link rel="stylesheet" href="finalproject.css">
 </head>
 <body>
 <header>
-  <div class="wrapper">
-    <div class="site-title">JJ’s Island Adventures – Explore Oahu</div>
-    <div class="tagline">Contact &amp; Recommendations: Plan your island adventure.</div>
+  <h1>Tonga Footprint Portraits</h1>
+  <p class="tagline">Capturing footprints of faith, family, and culture.</p>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="north-shore.html">North Shore</a></li>
-        <li><a href="windward.html">Windward Side</a></li>
-        <li><a href="honolulu.html">Honolulu</a></li>
-        <li><a href="food.html">Food &amp; Favorites</a></li>
-        <li><a href="contact.html" class="active">Contact &amp; Recommendations</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="finalproject.html">Home</a></li>
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="services.html">Sessions & Prices</a></li>
+      <li><a href="gallery.html">Gallery & Video</a></li>
+      <li><a href="learning.html">Learn & Resources</a></li>
+      <li><a href="contact.html" class="active">Book a Session</a></li>
+    </ul>
+  </nav>
 </header>
 
-<div class="wrapper">
-  <main>
-    <section class="form-wrapper">
-      <h1 class="section-title">Ask for Oahu Recommendations</h1>
-      <p class="content-intro">
-        This form is built to match the theme of the site. It asks about your favorite activities and which area
-        of Oahu you’re most interested in. JavaScript handles the form submission, hides the form, and displays
-        a success message when everything is filled out correctly.
-      </p>
+<main>
+  <h2>Book a Session</h2>
+  <p>
+    Fill out the form below to request a portrait session or ask a question
+    about our services.
+  </p>
 
-      <div id="formSuccess" class="success-message"></div>
+  <form id="bookingForm" action="process_form.php" method="post">
+    <fieldset>
+      <legend>Your Details</legend>
 
-      <div id="formContainer">
-        <div id="formError" class="error-message"></div>
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required>
 
-        <form id="contactForm" action="#" method="post">
-          <!-- Name -->
-          <div class="form-row">
-            <label for="fullName">Name:</label>
-            <div class="field">
-              <input type="text" id="fullName" name="fullName" required>
-            </div>
-          </div>
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
 
-          <!-- Email -->
-          <div class="form-row">
-            <label for="email">Email:</label>
-            <div class="field">
-              <input type="email" id="email" name="email" required>
-            </div>
-          </div>
+      <label for="phone">Phone *</label>
+      <input type="tel" id="phone" name="phone" required>
 
-          <!-- Favorite activity (radio) -->
-          <div class="form-row">
-            <label>Favorite Activity:</label>
-            <div class="field radio-group">
-              <label><input type="radio" name="favoriteActivity" value="Beach days"> Beach days</label>
-              <label><input type="radio" name="favoriteActivity" value="Hiking"> Hiking</label>
-              <label><input type="radio" name="favoriteActivity" value="Food adventures"> Food adventures</label>
-              <label><input type="radio" name="favoriteActivity" value="Cultural sites"> Cultural sites</label>
-            </div>
-          </div>
+      <label for="sessionType">Session Type *</label>
+      <select id="sessionType" name="sessionType" required>
+        <option value="">-- Please choose --</option>
+        <option value="mini">Mini Family Session</option>
+        <option value="fullFamily">Full Family Session</option>
+        <option value="graduation">Graduation / Mission Portrait</option>
+        <option value="event">Event / Cultural Performance</option>
+      </select>
+    </fieldset>
 
-          <!-- Area of interest (select) -->
-          <div class="form-row">
-            <label for="areaOfInterest">Area of Interest:</label>
-            <div class="field">
-              <select id="areaOfInterest" name="areaOfInterest" required>
-                <option value="">-- Please choose --</option>
-                <option value="North Shore">North Shore</option>
-                <option value="Windward Side">Windward Side</option>
-                <option value="Honolulu Area">Honolulu Area</option>
-                <option value="Anywhere on Oahu">Anywhere on Oahu</option>
-              </select>
-            </div>
-          </div>
+    <fieldset>
+      <legend>Session Details</legend>
 
-          <!-- Trip date -->
-          <div class="form-row">
-            <label for="tripDate">Trip Date:</label>
-            <div class="field">
-              <input type="date" id="tripDate" name="tripDate">
-            </div>
-          </div>
+      <label for="date">Preferred Date *</label>
+      <input type="date" id="date" name="date" required>
 
-          <!-- Message -->
-          <div class="form-row">
-            <label for="message">Message:</label>
-            <div class="field">
-              <textarea id="message" name="message" placeholder="Share any special needs, budget notes, or must-see spots."></textarea>
-            </div>
-          </div>
+      <label for="location">Preferred Location *</label>
+      <input type="text" id="location" name="location" required>
 
-          <!-- Agree to terms (checkbox) -->
-          <div class="form-row">
-            <label>Agreement:</label>
-            <div class="field checkbox-group">
-              <label>
-                <input type="checkbox" id="terms" name="terms">
-                I understand this is a student project and not an official travel agency.
-              </label>
-            </div>
-          </div>
+      <label for="message">Message (min 20 characters) *</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </fieldset>
 
-          <button type="submit">Send My Island Request</button>
-          <p class="form-note">
-            When you click “Send My Island Request,” JavaScript prevents a normal page reload, validates your answers,
-            hides the form, and shows a custom success message here.
-          </p>
-        </form>
-      </div>
-    </section>
-  </main>
-</div>
+    <button type="submit">Submit Request</button>
+  </form>
+
+  <div id="formResponse" class="hidden"></div>
+</main>
 
 <footer>
-  <div class="wrapper footer-content">
-    <div>© 2025 JJ’s Island Adventures – Contact &amp; Recommendations page.</div>
-    <div>This form demonstrates JavaScript form processing for the final project.</div>
-  </div>
+  <p>&copy; 2025 Tonga Footprint Portraits. All rights reserved.</p>
 </footer>
 
-<script src="form.js"></script>
+<script src="js/form.js"></script>
 </body>
 </html>
+
